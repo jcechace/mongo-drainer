@@ -88,7 +88,7 @@ public class MongoDrainer {
                 } else {
                     noEventCounter++;
                 }
-            } while ((eventsExpected - counter > 0) || noEventCounter < MAX_NO_EVENTS);
+            } while ((eventsExpected - counter > 0) && noEventCounter < MAX_NO_EVENTS);
 
             endTimestamp = Instant.now();
         }
